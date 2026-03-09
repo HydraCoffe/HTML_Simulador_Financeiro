@@ -1,4 +1,5 @@
-| <!DOCTYPE html>
+|
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,7 +17,11 @@
     <input type="text" id="ipt_sacasano"> <br>
     <button onclick="mostrar()">Calcular Economia com a Implantação do Sistema</button> <br>
     <div id="div_msg"></div>
-
+    <br> <br> <br>
+     Fontes: <br>
+     IBGE: https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/37054-em-2020-para-cada-r-1-00-gerado-pela-economia-foram-consumidos-6-2-litros-de-agua? <br>
+     coffehabitat: https://www.coffeehabitat.com/2009/09/water-footprint-of-coffee/ <br>
+     Embrapa : https://www.embrapa.br/busca-de-noticias/-/noticia/18010198/nova-tecnologia-aumenta-qualidade-do-cafe <br>
 </body>
 <script>
     function mostrar() {
@@ -26,7 +31,7 @@
         let gasto_agua_mediaporsaca = sacasano * 1200000//1kg de café gasta 20mil litros em sua produção, * 60=1200000, Fonte: cofeehabitat
         let preco_agua_ano = (0.00011 * gasto_agua_mediaporsaca);// 0.0001 é o custo em reais por litro de água em uma plantação, Fonte:IBGE
         let preco_agua_mes = (preco_agua_ano / 12);// preço da agua anual dividido pela quantidade de meses no ano
-        let tempo_retorno = ( custo_sensores/preco_agua_mes);
+        let tempo_retorno = (custo_sensores / preco_agua_mes);
         // 30% de economia de água após uso de sensores em plantações de café Fonte: Embrapa
         div_msg.innerHTML = `<br><b>Benefícios e efeitos</b><br> <p>Levando em consideração as ${sacasano} sacas por ano, o gasto de água chega próximo de ${gasto_agua_mediaporsaca}L anualmente, <br>
         quantidade essa poderia ser reduzida em até 30% com o uso dos sensores de umidade de solo, que auxiliam no <BR> melhor manejo possível da água na sua plantação. 
@@ -38,15 +43,8 @@
             precisão nas medidas e auxílio no seu manejo hídrico. O custo dos sensores gira em torno de apenas R$${(100 * areaplantacao)} no total, gerando um retorno financeiro <br>
             e de recursos a partir de ${(tempo_retorno).toFixed(1)} meses, ou seja, em ${(tempo_retorno * 30).toFixed(0)} dias o investimento (apenas os sensores) se paga e começa a tornar-se lucro.`
     }
-    
-    
-    /*  Fonte IBGE: https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/37054-em-2020-para-cada-r-1-00-gerado-pela-economia-foram-consumidos-6-2-litros-de-agua?
-        Fonte coffehabitat: https://www.coffeehabitat.com/2009/09/water-footprint-of-coffee/
-        Fonte Embrapa : https://www.embrapa.br/busca-de-noticias/-/noticia/18010198/nova-tecnologia-aumenta-qualidade-do-cafe
 
 
-
-
-    */
 </script>
+
 </html>
